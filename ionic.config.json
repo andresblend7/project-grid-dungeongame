@@ -1,0 +1,7 @@
+{
+  "name": "ProjectGridDungeongame",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
