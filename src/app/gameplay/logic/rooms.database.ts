@@ -3,7 +3,7 @@ import { IRoomData } from './gameplay.models';
 export const ROOM1_DATA= function():IRoomData{
   return {
     id:1,
-    slabs:48,
+    slabs:24,
     energyOrbs:{
       count:6,
       minVal:1,

@@ -11,6 +11,8 @@ export class PlayerStatsComponent implements OnInit {
 
   // @Input() modifyStat!:IModifyStat;
 
+  attacking=false;
+
   playerSkills:IPlayerSkill[] = [];
   stats!:ICharacterStats;
 
@@ -52,6 +54,11 @@ export class PlayerStatsComponent implements OnInit {
       console.warn('Critical!');
       dmg*=2;
     }
+    this.attacking=true;
+    console.log('gif');
+    setTimeout(() => {
+    this.attacking=false;
+    }, 400);
     return dmg;
   }
 
