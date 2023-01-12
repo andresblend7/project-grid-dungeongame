@@ -1,0 +1,38 @@
+<ion-content>
+<div id="bg">
+  <div id="enemy-data">
+    <div id="enemy-stats">
+     <app-enemy-stats #enemyStats></app-enemy-stats>
+    </div>
+  </div>
+
+
+  <div id="grid-board">
+    door: {{idxDoorPosition}} key: {{idxKeyPosition}}
+    <ion-grid id="grid" [fixed]="true">
+      <ion-row>
+        <ion-col *ngFor="let slab of slabs;let idx = index" [size]="columnSizeHud">
+          <div class="item" (click)="flipSlab(slab, idx, true)" [class.flipped]="slab.revealed" >
+            <div class="slab front"><span></span></div>
+            <div class="slab back" [class]="slab.item.class">
+               <span *ngIf="slab.item.effect != null">
+                  {{slab.item.effect.valueStr}}
+               </span>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+
+
+  <div id="player-data">
+    <div id="player-stats">
+      <app-player-stats #playerStats></app-player-stats>
+    </div>
+  </div>
+
+</div>
+</ion-content>

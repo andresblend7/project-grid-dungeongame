@@ -1,0 +1,42 @@
+<ion-grid class="p-0">
+  <ion-row>
+    <!-- Image -->
+    <ion-col size="2" class="p-0">
+      <img src="assets/img/player1.PNG" alt="">
+    </ion-col>
+    <!-- Stats -->
+    <ion-col class="p-0 col-stats"  size="5">
+       <!-- vida -->
+       <p class="p-0 m-0">{{stats.actualHealth}} / {{stats.maxHealth}} ♥</p>
+       <!-- poder -->
+       <p class="p-0 m-0">{{stats.power}} ♠</p>
+       <!-- escudo -->
+       <p class="p-0 m-0">{{stats.shield}} ♣</p>
+       <!-- energia -->
+       <p class="p-0 m-0">{{stats.actualEnergy}} ♦</p>
+    </ion-col>
+    <!-- Basic -->
+    <ion-col size="2" class="p-0">
+      <img src="assets/img/sword.PNG" id="p-sk0" alt="">
+    </ion-col>
+    <!-- Skills -->
+    <ion-col size="3" id="p-skills" class="p-0">
+      <section class="layout" *ngIf="playerSkills">
+        <div class="sk1" [class]="(playerSkills[0].energyCost<= stats.actualEnergy) ? '': 'skill-disabled'">
+          <img [src]="'assets/img/player_skills/sk'+playerSkills[0].id+'.PNG'" id="p-sk1" class="player-skill" alt="">
+        </div>
+        <div class="sk2" [class]="(playerSkills[1].energyCost<= stats.actualEnergy) ? '': 'skill-disabled'">
+          <img [src]="'assets/img/player_skills/sk'+playerSkills[1].id+'.PNG'" class="player-skill" alt="">
+        </div>
+        <div class="sk3" [class]="(playerSkills[2].energyCost<= stats.actualEnergy) ? '': 'skill-disabled'">
+          <img [src]="'assets/img/player_skills/sk'+playerSkills[2].id+'.PNG'"  class="player-skill" alt="">
+        </div>
+        <div class="sk4" [class]="(playerSkills[3].energyCost<= stats.actualEnergy) ? '': 'skill-disabled'">
+          <img [src]="'assets/img/player_skills/sk'+playerSkills[3].id+'.PNG'"  class="player-skill" alt="">
+        </div>
+      </section>
+
+    </ion-col>
+
+  </ion-row>
+ </ion-grid>

@@ -1,0 +1,37 @@
+<ion-grid class="p-0">
+  <ion-row>
+
+
+
+    <!-- Skills -->
+    <ion-col size="3" id="e-skills" class="p-0">
+      <section class="layout">
+        <div class="sk1"><img src="assets/img/noskill.PNG" id="e-sk1" class="enemy-skill" alt=""></div>
+        <div class="sk2"><img src="assets/img/noskill.PNG" id="e-sk2" class="enemy-skill" alt=""></div>
+        <div class="sk3"><img src="assets/img/noskill.PNG" id="e-sk3" class="enemy-skill" alt=""></div>
+        <div class="sk4"><img src="assets/img/enemy_skills/e2.PNG" id="e-sk4" class="enemy-skill" alt=""> </div>
+      </section>
+    </ion-col>
+      <!-- Basic -->
+      <ion-col size="2" class="p-0">
+      <img src="assets/img/enemy_skills/e1.PNG" id="p-sk0" alt="">
+      </ion-col>
+
+      <!-- Stats -->
+      <ion-col class="p-0 col-stats"  size="5">
+          <!-- vida -->
+          <p class="p-0 m-0">{{stats.actualHealth}} / {{stats.maxHealth}} ♥</p>
+          <!-- poder -->
+          <p class="p-0 m-0">{{stats.power}} ♠</p>
+          <!-- escudo -->
+          <p class="p-0 m-0">{{stats.shield}} ♣</p>
+          <!-- energia -->
+          <p class="p-0 m-0">{{stats.actualEnergy}} ♦</p>
+      </ion-col>
+    <!-- Image -->
+    <ion-col size="2" class="p-0">
+      <img src="assets/img/enemy1.PNG" alt="">
+    </ion-col>
+
+  </ion-row>
+ </ion-grid>

@@ -1,0 +1,40 @@
+
+#p-sk0{
+  max-height: 80%;
+  margin-top: 10%;
+}
+
+#e-skills{
+  line-height: 0;
+  padding: 0;
+}
+
+
+.layout {
+  height: 100%;
+  line-height: normal !important;
+  width: 100%;
+  display: grid;
+  grid:
+    "sk1 sk2" 43%
+    "sk3 sk4" 43%
+    / 43% 43%;
+  place-items: center;
+  justify-content: center;
+}
+
+.sk1 { grid-area: sk1; }
+.sk2 { grid-area: sk2; }
+.sk3 { grid-area: sk3; }
+.sk4 { grid-area: sk4; }
+
+.col-stats{
+  padding-right: 6px;
+  line-height: normal;
+  font-size: 13px;
+  text-align: right;;
+}
+
+.enemy-skill{
+
+}
